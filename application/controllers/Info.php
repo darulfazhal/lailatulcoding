@@ -5,7 +5,7 @@ class Info extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->model('infos_model');
+		$this->load->model('infos_model');				
 	}
 
 	// /Info/index
@@ -63,6 +63,36 @@ class Info extends CI_Controller
 		$this->infos_model->delete($data['id']);
 		redirect(site_url('info/index'));
 	}
+	// /Info/report
+	public function report()
+	{
+		$data['id']="";
+		$data['kota']="";
+		$data['tahun']="";
+		$data['dev_total']="";
+		$data['des_total']="";
+		$data['pro_total']="";
+		$data['don_total']="";
+		$data['created_at']="";
+		$data['updated_at']="";		
+		$data['cities']=$this->infos_model->getCity(Date('Y'))->result();				
+
+		$this->load->view('infos/report',$data);
+	}
+
+	public function ajax()
+	{
+		$result=$this->infos_model->getCity($this->input->post('year'))->result();						
+	 	$list = array();
+	    while($row = $result->fetch_assoc())
+	    {
+	        $list[] = $row['kota'];
+	    }
+
+	    return json_encode($list);
+
+	}
+
 }
 
 ?>

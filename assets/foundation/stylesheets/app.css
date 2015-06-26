@@ -10,7 +10,9 @@
 body{
 	background: #fff;
 }
-
+.center {
+	text-align: center;
+}
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
@@ -18,19 +20,32 @@ body{
 /* Header Navigation */
 .head-nav{
 	height: 100px;
-	background-color: transparent; 
+	/* position: absolute; */
 	border-bottom: 1px solid #FFFF00;
 }
-.navi{
-	
+.caption-banner{
+	position: absolute;
+	color: #fff;
+	text-align: center;
+	margin-top: 15%;
+	margin-left: 20%;
 }
-
+.caption-flag{
+	position: absolute;
+	color: #fff;
+	text-align: center;
+}
 .top-20{
 	margin-top: 20px; 
 }
 .top-30{
 	margin-top: 30px; 
 }
+
+
+
+
+
 /* -----------------------------------------
    Page Name 1
 ----------------------------------------- */

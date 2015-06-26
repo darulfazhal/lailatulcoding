@@ -1,3 +1,6 @@
+<h2>Create</h2>
+<a href='<?php echo site_url('info/index/'); ?>'>Index</a> 
+<a href='<?php echo site_url('info/report/'); ?>'>Report</a> 
 <?php
 	if($id==null)
 	{

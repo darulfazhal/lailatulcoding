@@ -1,25 +1,86 @@
 <?php $this->load->view('sections/head'); ?>
-
-<br>
-<div class="row">
-<div id="container" class="panel">
-	<h1>Meridian CodeIgniter CodeBase</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the 
-			<a href="user_guide/" class="small button radius">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
-</div>
-</div>
-
+ <body>
+ 	<div class="row">
+      <div class="large-12 columns">
+        <h1>Welcome to Foundation</h1>
+      </div>
+    </div>
+ 	<div class="row">
+      <div class="large-12 columns">
+      	<ul class="tabs" data-tab>
+ 			<li class="tab-title active large-6"><a href="#panel1">Peserta</a></li>
+  			<li class="tab-title large-6"><a href="#panel2">Event</a></li>
+ 		</ul>
+		<div class="tabs-content">
+  			<div class="content active" id="panel1">
+      			<form action="welcome/daftar_peserta">
+				  <div class="row">
+				    <div class="large-6 columns">
+				      <label>Nama Peserta</label>
+				      <input type="text" placeholder="*Nama " name="nama_peserta"/>
+				    </div>
+				  </div>
+				  <div class="row">
+				    <div class="large-6 medium-4 columns">
+				      <label>Email</label>
+				      <input type="email" placeholder="email" name="email"/>
+				    </div>
+				     
+				  </div>
+				   <div class="row">
+				    <div class="large-6 medium-4 columns">
+				      <label>Telepon</label>
+				      <input type="text" placeholder="Telepon" name="telepon"/>
+				    </div>
+				     
+				  </div>
+				   <div class="row">
+				    <div class="large-6 medium-4 columns">
+				      <label>Skill</label>
+				     <textarea placeholder="html,css,javascript" name="skill"></textarea>
+				    </div>
+				     
+				  </div>
+				  <!-- <div class="row">
+				    <div class="large-6 columns">
+				      <label>Select Box</label>
+				      <select>
+				        <option value="husker">Husker</option>
+				        <option value="starbuck">Starbuck</option>
+				        <option value="hotdog">Hot Dog</option>
+				        <option value="apollo">Apollo</option>
+				      </select>
+				    </div>
+				  </div>
+				  <div class="row">
+				    <div class="large-6 medium-6 columns">
+				      <label>Choose Your Favorite</label>
+				      <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
+				      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+				    </div>
+				  </div>
+				  <div class="row">
+				    <div class="large-6 columns">
+				      <label>Textarea Label</label>
+				      
+				    </div>
+				  </div> -->
+				<input type="checkbox" name="agree" value="agree" id="agree"><label for="agree">I Agree ...</label>
+				  <div class="row">
+				    <div class="large-12 columns">
+				    <p><a href="#" class="small button">Daftar</a>
+				    </div>
+				  </div>
+				   
+				</form>
+  			</div>
+		  	<div class="content" id="panel2">
+		     
+		  	</div>
+  	
+		</div>
+       
+      </div>
+    </div>
+  
 <?php $this->load->view('sections/footer_scripts'); ?>

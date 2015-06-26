@@ -81,6 +81,9 @@ class Welcome extends CI_Controller {
 	public function forgot(){
 		$this->load->view('forgot_v');
 	}
+	public function laporan(){
+		$this->load->view('laporan_v');
+	}
 }
 
 /* End of file welcome.php */

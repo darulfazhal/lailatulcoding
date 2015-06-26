@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Event extends CI_Controller {
 
 	private $_admin;
 
@@ -9,9 +9,15 @@ class Home extends CI_Controller {
 	    if(!$this->session->userdata('logged_in')) redirect('admin/login');
 	    $this->_admin = $this->session->userdata('logged_in');
 	}
-	public function index()
-	{
-		$this->load->view('admin/main', $this->_admin);
+	public function index()	{
+		$data['content'] = 'event';
+		$data['admin'] = $this->_admin;
+		$this->load->view('admin/main', $data);
+	}
+	public function add() {
+		$data['content'] = 'new_event';
+		$data['admin'] = $this->_admin;
+		$this->load->view('admin/main', $data);
 	}
 }
 

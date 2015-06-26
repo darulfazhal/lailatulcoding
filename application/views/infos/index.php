@@ -7,7 +7,10 @@
 			<th>Id</th>
 			<th>Kota</th>
 			<th>Tahun</th>
-			<th>User Total</th>			
+			<th>Developher Total</th>			
+			<th>Designer Total</th>			
+			<th>Nilai Total Proyek</th>			
+			<th>Nilai Total Donasi</th>			
 			<th></th>
 		</tr>
 	</thead>
@@ -17,9 +20,12 @@
 		echo"
 		<tr>
 			<th>".$info->id."</th>
-			<th>".$info->kota_id."</th>
+			<th>".$info->kota."</th>
 			<th>".$info->tahun."</th>
-			<th>".$info->user_total."</th>			
+			<th>".$info->dev_total."</th>			
+			<th>".$info->des_total."</th>			
+			<th>".$info->pro_total."</th>			
+			<th>".$info->don_total."</th>			
 			<th>
 				<a href='".site_url('info/edit/'.$info->id)."'>Edit</a> | 
  				<form action='".site_url('info/delete')."' method='post'><input type='hidden' name='id' value='".$info->id."'><input type='submit' value='delete'></form>

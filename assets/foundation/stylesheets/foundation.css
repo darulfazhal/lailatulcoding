@@ -3369,10 +3369,13 @@ meta.foundation-mq-topbar {
       padding: 1rem 2rem; }
       .tabs dd > a:hover,
       .tabs .tab-title > a:hover {
-        background-color: #e1e1e1; }
+        background-color: #0ab25c; }
     .tabs dd.active a,
     .tabs .tab-title.active a {
       background-color: #0ab25c;
+      background: #0ab25c url('../images/arrow-year-active.png');
+      background-repeat: no-repeat;
+    background-position-x: 169px;
       color: #222222; }
   .tabs.radius dd:first-child a,
   .tabs.radius .tab:first-child a {

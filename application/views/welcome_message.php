@@ -15,9 +15,7 @@
  		</ul>
 		<div class="tabs-content">
   			<div class="content active" id="panel1">
-  			<p><?php echo $this->session->flashdata('message');
-  		 
-  			?>
+  			<p><?php echo $this->session->flashdata('message'); ?>
       			<form action="<?php echo base_url();?>welcome/daftar_peserta" method="post" data-abide>
 				  <div class="row">
 				    <div class="large-6 columns">
@@ -26,8 +24,7 @@
 					   </label>
 					   <small class="error">Nama Peserta Harus Diisi</small>
 				    </div>
-				  </div>
-				  <div class="row">
+				 
 				    <div class="large-6 medium-4 columns">
 				    	<label>Email <small>required</small>
 					         <input type="email" placeholder="email" name="email" required/>
@@ -45,8 +42,7 @@
 					   	<small class="error">Telepon Harus Diisi</small>
 				   	</div>
 				     
-				  </div>
-				   <div class="row">
+				   
 				    <div class="large-6 medium-4 columns">
 				     	<label>Jobs <small>required</small>
 					      
@@ -58,21 +54,21 @@
 				     
 				  </div>
 				   <div class="row">
-				    <div class="large-6 medium-4 columns">
+				    <div class="large-12 medium-4 columns">
 				     <label>Skill <small>required</small>
-				     <textarea placeholder="html,css,javascript" name="skill" required></textarea>
+				     	<textarea placeholder="html,css,javascript" name="skill" required></textarea>
 				     </label>
 				     	<small class="error">Skill Harus Diisi</small>
 				    </div>
 				     
 				  </div>
-			 	  <input type="checkbox" name="agree" value="agree" id="agree"><label for="agree">I Agree ...</label>
-				  	<div class="row">
-				    <div class="large-12 columns">
-				    <p><button type="submit" href="#" class="small button">Daftar</button>
-				    </div>
-				  </div>
+			 	  <!-- <input type="checkbox" name="agree" value="agree" id="agree"><label for="agree">I Agree ...</label> -->
 				   
+				   <div class="row">
+					    <div class="small-6 small-centered text-center columns">
+					        <button type="submit" href="#" class="small button small-centered ">Daftar</button>
+					    </div>
+					</div>
 				</form>
   			</div>
 		  	<div class="content" id="panel2">
@@ -126,7 +122,7 @@
 				    </div>
 				     
 				  </div>
-				<input type="checkbox" name="agree" value="agree" id="agree"><label for="agree">I Agree ...</label>
+				<!-- <input type="checkbox" name="agree" value="agree" id="agree"><label for="agree">I Agree ...</label> -->
 				  <div class="row">
 				    <div class="large-12 columns">
 				    <input type="submit" value="asd" class="small button">

@@ -63,7 +63,7 @@ MAIN SIDEBAR MENU
 			</li>
 			<li class="mt">
 				<a href="index.html">
-					<i class="fa fa-dashboard"></i>
+					<i class="fa fa-book"></i>
 					<span>Summary</span>
 				</a>
 			</li>

@@ -3362,7 +3362,7 @@ meta.foundation-mq-topbar {
     .tabs dd > a,
     .tabs .tab-title > a {
       display: block;
-      background-color: #EFEFEF;
+      background-color: #01a651;
       color: #222222;
       font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-size: 1rem;
@@ -3372,7 +3372,7 @@ meta.foundation-mq-topbar {
         background-color: #e1e1e1; }
     .tabs dd.active a,
     .tabs .tab-title.active a {
-      background-color: #FFFFFF;
+      background-color: #0ab25c;
       color: #222222; }
   .tabs.radius dd:first-child a,
   .tabs.radius .tab:first-child a {

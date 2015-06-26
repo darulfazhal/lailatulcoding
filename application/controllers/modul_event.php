@@ -17,10 +17,9 @@ class Modul_event extends CI_Controller {
             $data['kota'] = $this->input->post('kota');
             $data['jml_peserta'] = $this->input->post('jml_peserta');
             $data['tahun'] = $this->input->post('tahun');
-      			$data['tgl_pengajuan'] = date("Y-m-d h:i:s");
+      		$data['tgl_pengajuan'] = date("Y-m-d h:i:s");
 
             // Send Mail
-
             $email = $data['email'];
             $nama = $data['nama_penyelenggara'];
             $this->email->from($email,$nama);

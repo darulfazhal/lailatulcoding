@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Index extends CI_Controller {
+class Home extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,6 +20,7 @@ class Index extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
+	    if(!$this->session->userdata('logged_in')) redirect('admin/login');
 	}
 	public function index()
 	{

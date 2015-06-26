@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Login extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,20 +18,16 @@ class Admin extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	function __construct(){
-		parent::__construct();
-		  
-		
-		 
-	 
+		parent::__construct();	 
 	}
-	public function index()
-	{
+
+	public function index()	{
 		//$this->load->view('welcome_message');
 		if($this->session->userdata('logged_in'))
 	   {
-	  	 redirect("admin/home","refresh");
+	  	 redirect("admin/login/home","refresh");
 	   }else{
-	   		$this->load->view('login_v');
+	   		$this->load->view('admin/login');
 	   }
 	
    
@@ -42,7 +38,7 @@ class Admin extends CI_Controller {
 		$password = $this->input->post('password');
 	  	 //query the database
 	   	$result = $this->m_user->login($username, $password);
-
+	   	
 	   if($result)
 	   {
 	     $sess_array = array();

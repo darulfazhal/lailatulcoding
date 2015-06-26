@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost'; // YOUR PRODUCTION HOST e.g. tunnel.pagodabox.com 
 $db['default']['username'] = 'root'; // YOUR PRODUCTION USERNAME
-$db['default']['password'] = '';
+$db['default']['password'] = 'odong';
 $db['default']['database'] = 'lailatulcoding'; // YOUR PRODUCTION DATABASE NAME
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';

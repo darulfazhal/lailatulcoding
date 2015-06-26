@@ -28,6 +28,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+	public function home()
+	{
+		$this->load->view('home');
+	}
 	public function daftar_peserta()
 	{
 	  	/*$config = Array(
@@ -80,6 +84,9 @@ class Welcome extends CI_Controller {
 	}
 	public function forgot(){
 		$this->load->view('forgot_v');
+	}
+	public function laporan(){
+		$this->load->view('laporan_v');
 	}
 }
 

@@ -26,7 +26,7 @@ $config['base_url']	= '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -357,6 +357,7 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
-
+$config['admin_email'] = 'fazhaldarul@gmail.com';
+$config['site_title'] = 'Lailatul Coding ';
 /* End of file config.php */
 /* Location: ./application/config/config.php */

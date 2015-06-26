@@ -7,14 +7,30 @@
 :: Page Name 1
 :: Page Name 2
 */
-
+body{
+	background: #fff;
+}
 
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
 
+/* Header Navigation */
+.head-nav{
+	height: 100px;
+	background-color: transparent; 
+	border-bottom: 1px solid #FFFF00;
+}
+.navi{
+	
+}
 
-
+.top-20{
+	margin-top: 20px; 
+}
+.top-30{
+	margin-top: 30px; 
+}
 /* -----------------------------------------
    Page Name 1
 ----------------------------------------- */

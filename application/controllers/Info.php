@@ -5,17 +5,7 @@ class Info extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->model('infos_model');		
-		// if debug disable
-		$this->isLoggedIn();
-	}
-
-	function isLoggedIn()
-	{
-		if(!$this->session->userdata('logged_in'))
-	   	{	  		
-	  		redirect("admin/home","refresh");
-	  	}	  	
+		$this->load->model('infos_model');
 	}
 
 	// /Info/index
@@ -29,13 +19,9 @@ class Info extends CI_Controller
 	public function create()
 	{
 		$data['id']="";
-		$data['kota']="";
+		$data['kota_id']="";
 		$data['tahun']="";
-		$data['dev_total']="";
-		$data['des_total']="";
-		$data['pro_total']="";
-		$data['don_total']="";
-		$data['created_at']=Date('Y-m-d H:i:s');
+		$data['user_total']="";
 
 		$this->load->view('infos/create',$data);
 	}
@@ -44,13 +30,9 @@ class Info extends CI_Controller
 	public function store()
 	{
 		$data['id']=$this->input->post('id');
-		$data['kota']=htmlentities($this->input->post('kota'));
+		$data['kota_id']=$this->input->post('kota_id');
 		$data['tahun']=$this->input->post('tahun');
-		$data['dev_total']=$this->input->post('dev_total');
-		$data['des_total']=$this->input->post('des_total');
-		$data['pro_total']=$this->input->post('pro_total');
-		$data['don_total']=$this->input->post('don_total');
-		$data['created_at']=Date('Y-m-d H:i:s');
+		$data['user_total']=$this->input->post('user_total');
 
 		$this->infos_model->store($data);
 		redirect(site_url('info/index'));
@@ -67,13 +49,9 @@ class Info extends CI_Controller
 	public function update()
 	{		
 		$data['id']=$this->input->post('id');
-		$data['kota']=htmlentities($this->input->post('kota'));
+		$data['kota_id']=$this->input->post('kota_id');
 		$data['tahun']=$this->input->post('tahun');
-		$data['dev_total']=$this->input->post('dev_total');
-		$data['des_total']=$this->input->post('des_total');
-		$data['pro_total']=$this->input->post('pro_total');
-		$data['don_total']=$this->input->post('don_total');
-
+		$data['user_total']=$this->input->post('user_total');		
 		$this->infos_model->update($data['id'],$data);
 		redirect(site_url('info/index'));
 	}
@@ -85,7 +63,6 @@ class Info extends CI_Controller
 		$this->infos_model->delete($data['id']);
 		redirect(site_url('info/index'));
 	}
-
 }
 
 ?>

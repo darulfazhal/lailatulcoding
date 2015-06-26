@@ -41,5 +41,15 @@ class Infos_model extends CI_Model{
 		$this->db->delete('infos');
 	}
 
+	public function getCity($year)
+	{
+		$this->db->select("kota");
+		$this->db->from("infos");
+		$this->db->where("tahun",$year);
+		$this->db->group_by("kota");
+		
+		return $this->db->get();
+	}
+
 }
 ?>

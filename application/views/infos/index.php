@@ -1,5 +1,6 @@
 <h2>Infos</h2>
 <a href='<?php echo site_url('info/create/'); ?>'>Create</a> 
+<a href='<?php echo site_url('info/report/'); ?>'>Report</a> 
 <hr></hr>
 <table>
 	<thead>

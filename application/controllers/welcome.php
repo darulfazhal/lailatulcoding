@@ -68,8 +68,8 @@ class Welcome extends CI_Controller {
 			$data['skill'] = $this->input->post('skill');
 			$insert = $this->m_user->register_peserta($data);
 			if($insert){
+			 	$this->session->set_flashdata('message', 'Terima Kasih');
 				redirect("/","refresh");
-				$this->session->set_flashdata('message', 'Terima Kasih');
 			}else{
 				$this->session->set_flashdata('message', 'Ada Kesalahan');
 			}

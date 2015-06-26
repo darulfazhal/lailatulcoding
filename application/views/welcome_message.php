@@ -16,7 +16,7 @@
 		<div class="tabs-content">
   			<div class="content active" id="panel1">
   			<p><?php echo $this->session->flashdata('message');
-  			print_r($this->session);
+  		 
   			?>
       			<form action="<?php echo base_url();?>welcome/daftar_peserta" method="post" data-abide>
 				  <div class="row">

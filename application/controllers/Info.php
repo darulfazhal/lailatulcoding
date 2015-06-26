@@ -5,7 +5,17 @@ class Info extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->model('infos_model');
+		$this->load->model('infos_model');		
+		// if debug disable
+		$this->isLoggedIn();
+	}
+
+	function isLoggedIn()
+	{
+		if(!$this->session->userdata('logged_in'))
+	   	{	  		
+	  		redirect("admin/home","refresh");
+	  	}	  	
 	}
 
 	// /Info/index
@@ -34,12 +44,13 @@ class Info extends CI_Controller
 	public function store()
 	{
 		$data['id']=$this->input->post('id');
-		$data['kota']=$this->input->post('kota');
+		$data['kota']=htmlentities($this->input->post('kota'));
 		$data['tahun']=$this->input->post('tahun');
 		$data['dev_total']=$this->input->post('dev_total');
 		$data['des_total']=$this->input->post('des_total');
 		$data['pro_total']=$this->input->post('pro_total');
 		$data['don_total']=$this->input->post('don_total');
+		$data['created_at']=Date('Y-m-d H:i:s');
 
 		$this->infos_model->store($data);
 		redirect(site_url('info/index'));
@@ -52,12 +63,11 @@ class Info extends CI_Controller
 		$this->load->view('infos/create',$data);
 	}
 
-
 	// /Info/update
 	public function update()
 	{		
 		$data['id']=$this->input->post('id');
-		$data['kota']=$this->input->post('kota');
+		$data['kota']=htmlentities($this->input->post('kota'));
 		$data['tahun']=$this->input->post('tahun');
 		$data['dev_total']=$this->input->post('dev_total');
 		$data['des_total']=$this->input->post('des_total');
@@ -75,6 +85,7 @@ class Info extends CI_Controller
 		$this->infos_model->delete($data['id']);
 		redirect(site_url('info/index'));
 	}
+
 }
 
 ?>

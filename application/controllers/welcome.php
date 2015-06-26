@@ -66,6 +66,7 @@ class Welcome extends CI_Controller {
 			$data['email'] = $this->input->post('email');
 			$data['telpon'] = $this->input->post('telepon');
 			$data['skill'] = $this->input->post('skill');
+			$data['jobs'] = $this->input->post('jobs');
 			$insert = $this->m_user->register_peserta($data);
 			if($insert){
 			 	$this->session->set_flashdata('message', 'Terima Kasih');

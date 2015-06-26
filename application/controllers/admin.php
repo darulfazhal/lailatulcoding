@@ -77,16 +77,33 @@ class Admin extends CI_Controller {
 	   	
 	   	redirect('admin/', 'refresh');
 	}
-	public function forgot_password(){
+	public function do_forgot_password(){
 		 $email = $this->input->post('email');
 		 $result = $this->m_user->check_email($email);
+		 
 		 if($result){
-		 	$generate = "";
-		 	$password = sha1($password);
-		 	redirect('admin/', 'refresh');
+		 	echo $generate = $this->randomPassword();
+		  	$password = sha1($generate);
+		   	$user_id = $result->id;
+		 	$updateResult = $this->m_user->update_user($user_id, $password);
+		 	if($updateResult){
+		 		//redirect('admin/', 'refresh');
+		 	}
+		 	 
 		 }else{
-		 	redirect('welcome/forgot', 'refresh');
+	 		$this->session->set_flashdata('message', 'Email Tidak ada ');
+		   	redirect('welcome/forgot', 'refresh');
 		 }
+	}
+	function randomPassword() {
+	    $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789";
+	    $pass = array(); //remember to declare $pass as an array
+	    $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
+	    for ($i = 0; $i < 8; $i++) {
+	        $n = rand(0, $alphaLength);
+	        $pass[] = $alphabet[$n];
+	    }
+	    return implode($pass); //turn the array into a string
 	}
 }
 

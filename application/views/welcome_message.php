@@ -48,6 +48,17 @@
 				  </div>
 				   <div class="row">
 				    <div class="large-6 medium-4 columns">
+				     	<label>Jobs <small>required</small>
+					      
+					   	</label>
+					   	  <input type="radio"  name="jobs" value="developer" /> Developer
+					        <input type="radio"  name="jobs" value="designer" /> Designer
+					   	<small class="error">Telepon Harus Diisi</small>
+				   	</div>
+				     
+				  </div>
+				   <div class="row">
+				    <div class="large-6 medium-4 columns">
 				     <label>Skill <small>required</small>
 				     <textarea placeholder="html,css,javascript" name="skill" required></textarea>
 				     </label>

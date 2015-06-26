@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = ''; // YOUR PRODUCTION HOST e.g. tunnel.pagodabox.com 
-$db['default']['username'] = ''; // YOUR PRODUCTION USERNAME
+$db['default']['hostname'] = 'localhost'; // YOUR PRODUCTION HOST e.g. tunnel.pagodabox.com 
+$db['default']['username'] = 'root'; // YOUR PRODUCTION USERNAME
 $db['default']['password'] = '';
-$db['default']['database'] = ''; // YOUR PRODUCTION DATABASE NAME
+$db['default']['database'] = 'lailatulcoding'; // YOUR PRODUCTION DATABASE NAME
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

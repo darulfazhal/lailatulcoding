@@ -2,7 +2,7 @@
  <body>
  	<div class="row">
       <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
+        <h1>Lailatul Coding</h1>
       </div>
     </div>
  	<div class="row">
@@ -51,8 +51,8 @@
 				     	<label>Jobs <small>required</small>
 					      
 					   	</label>
-					   	  <input type="radio"  name="jobs" value="developer" /> Developer
-					        <input type="radio"  name="jobs" value="designer" /> Designer
+					   	  <input type="radio"  name="jobs" value="Developer" checked /> Developer
+					        <input type="radio"  name="jobs" value="Designer" /> Designer
 					   	<small class="error">Telepon Harus Diisi</small>
 				   	</div>
 				     

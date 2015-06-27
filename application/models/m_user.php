@@ -33,5 +33,31 @@ class M_user extends CI_Model{
 	     return false;
 	   }
 	 }
+	 function update_user($user_id, $password){
+	 		$data = Array(
+				'password'=>$password
+				 
+			);
+			$this->db->where('id', $user_id);
+			$this->db->update("admin", $data); 
+			return true;
+	 }
+	 function check_email($email){
+	   $this -> db -> select('*');
+	   $this -> db -> from('admin');
+	   $this -> db -> where('email', $email);
+	   $this -> db -> limit(1);
+	 
+	   $query = $this -> db -> get();
+	 	
+	   if($query -> num_rows() == 1)
+	   {
+	     return $query->row();
+	   }
+	   else
+	   {
+	     return false;
+	   }
+	 }
 	
 }

@@ -74,8 +74,50 @@
 				   
 				</form>
   			</div>
-		  	<div class="content" id="panel2">
-		     
+		  	<div class="content right" id="panel2">
+		     	<form action="welcome/daftar_peserta">
+				  <div class="row">
+				    <div class="large-6 columns">
+				      <label>Nama Anda</label>
+				      <input type="text" placeholder="*Nama " name="nama_pemohon"/>
+				    </div>
+				  </div>
+				  <div class="row">
+				    <div class="large-6 medium-4 columns">
+				      <label>Email</label>
+				      <input type="email" placeholder="email" name="email"/>
+				    </div>
+				     
+				  </div>
+				   <div class="row">
+				    <div class="large-6 medium-4 columns">
+				      <label>Telepon</label>
+				      <input type="text" placeholder="Telepon" name="telepon"/>
+				    </div>
+				     
+				  </div>
+				   <div class="row">
+				    <div class="large-6 medium-4 columns">
+				      <label>Kota Acara</label>
+				      <input type="text" placeholder="Kota" name="kota"/>
+				    </div>
+				     
+				  </div>
+				  <div class="row">
+				    <div class="large-6 medium-4 columns">
+				      <label>Jumlah Peserta</label>
+				      <input type="number" placeholder="Jumlah Peserta" name="jml_peserta"/>
+				    </div>
+				     
+				  </div>
+				<input type="checkbox" name="agree" value="agree" id="agree"><label for="agree">I Agree ...</label>
+				  <div class="row">
+				    <div class="large-12 columns">
+				    <p><a href="#" class="small button">Daftarkan Event</a>
+				    </div>
+				  </div>
+				   
+				</form>
 		  	</div>
   	
 		</div>

@@ -6,6 +6,7 @@ class Modul_event extends CI_Controller {
 	function __construct() {
 		parent::__construct();
     $this->load->model('event_model');
+    $this->load->library('email');
 	}
 
 	public function add_event() {
@@ -19,29 +20,17 @@ class Modul_event extends CI_Controller {
       			$data['tgl_pengajuan'] = date("Y-m-d h:i:s");
 
             // Send Mail
-            $email = "asd@jkl.zxc";
-            $nama = "nunu";
-            $subjek = "yuu";
-            $pesan = "ini adalah pesan";
-            $url = $_SERVER['HTTP_REFERER'];
 
-            $config = Array(
-              'protocol' => 'smtp',
-              'smtp_host' => 'ssl://smtp.googlemail.com',
-              'smtp_port' => 465,
-              'smtp_user' => 'annu.nura@gmail.com', //isi dengan gmailmu!
-              'smtp_pass' => 'nuraooii', //isi dengan password gmailmu!
-              'mailtype' => 'html',
-              'charset' => 'iso-8859-1',
-              'wordwrap' => TRUE
-            );
+            $email = $data['email'];
+            $nama = $data['nama_penyelenggara'];
+            $this->email->from($email,$nama);
+            $this->email->to('annu.nura@gmail.com'); 
+            //$this->email->cc('another@another-example.com'); 
+            //$this->email->bcc('them@their-example.com'); 
 
-            $this->load->library('email', $config);
-            $this->email->set_newline("\r\n");
-            $this->email->from($email);
-            $this->email->to('angga.nunu@gmail.com'); //email tujuan. Isikan dengan emailmu!
-            $this->email->subject($subjek);
-            $this->email->message($pesan);
+            $this->email->subject('Request Event');
+            $this->email->message('Ini adalah isi Email');  
+
             if($this->email->send())
             {
               $this->event_model->insert_event($data);

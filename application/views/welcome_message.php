@@ -16,7 +16,7 @@
 		<div class="tabs-content">
   			<div class="content active" id="panel1">
   			<p><?php echo $this->session->flashdata('message');
-  			print_r($this->session);
+  		 
   			?>
       			<form action="<?php echo base_url();?>welcome/daftar_peserta" method="post" data-abide>
 				  <div class="row">
@@ -42,6 +42,17 @@
 				     	<label>Telepon <small>required</small>
 					        <input type="text" placeholder="Telepon" name="telepon" required/>
 					   	</label>
+					   	<small class="error">Telepon Harus Diisi</small>
+				   	</div>
+				     
+				  </div>
+				   <div class="row">
+				    <div class="large-6 medium-4 columns">
+				     	<label>Jobs <small>required</small>
+					      
+					   	</label>
+					   	  <input type="radio"  name="jobs" value="developer" /> Developer
+					        <input type="radio"  name="jobs" value="designer" /> Designer
 					   	<small class="error">Telepon Harus Diisi</small>
 				   	</div>
 				     

@@ -19,9 +19,14 @@ class Info extends CI_Controller
 	public function create()
 	{
 		$data['id']="";
-		$data['kota_id']="";
+		$data['kota']="";
 		$data['tahun']="";
-		$data['user_total']="";
+		$data['dev_total']="";
+		$data['des_total']="";
+		$data['pro_total']="";
+		$data['don_total']="";
+		$data['created_at']="";
+		$data['updated_at']="";		
 
 		$this->load->view('infos/create',$data);
 	}
@@ -30,9 +35,13 @@ class Info extends CI_Controller
 	public function store()
 	{
 		$data['id']=$this->input->post('id');
-		$data['kota_id']=$this->input->post('kota_id');
+		$data['kota']=$this->input->post('kota');
 		$data['tahun']=$this->input->post('tahun');
-		$data['user_total']=$this->input->post('user_total');
+		$data['dev_total']=$this->input->post('dev_total');
+		$data['des_total']=$this->input->post('des_total');
+		$data['pro_total']=$this->input->post('pro_total');
+		$data['don_total']=$this->input->post('don_total');
+		$data['created_at']=$this->input->post('created_at');
 
 		$this->infos_model->store($data);
 		redirect(site_url('info/index'));
@@ -49,9 +58,13 @@ class Info extends CI_Controller
 	public function update()
 	{		
 		$data['id']=$this->input->post('id');
-		$data['kota_id']=$this->input->post('kota_id');
+		$data['kota']=$this->input->post('kota');
 		$data['tahun']=$this->input->post('tahun');
-		$data['user_total']=$this->input->post('user_total');		
+		$data['dev_total']=$this->input->post('dev_total');
+		$data['des_total']=$this->input->post('des_total');
+		$data['pro_total']=$this->input->post('pro_total');
+		$data['don_total']=$this->input->post('don_total');
+		$data['created_at']=$this->input->post('created_at');
 		$this->infos_model->update($data['id'],$data);
 		redirect(site_url('info/index'));
 	}

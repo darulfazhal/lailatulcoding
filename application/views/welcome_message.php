@@ -1,13 +1,59 @@
 <?php $this->load->view('sections/head'); ?>
- <body>
- 	<div class="row">
-      <div class="large-12 columns">
-        <h1>Lailatul Coding</h1>
-      </div>
-    </div>
- 	<div class="row">
+<body>
 
-      <div class="large-12 columns">
+<!-- Header Navigation-->
+<div class="content">
+	<div class="row">
+			<div class="head-nav">
+				<div class="left top-20">
+					<img src="<?php echo base_url('assets/images'); ?>/logo-lailatul-coding.png" />
+				</div>
+				<div class="right top-30">
+					<a href="" class="small button ">Cara Kerja</a>
+					<a href="" class="small button ">Registrasi</a>
+					<a href="" class="small button ">Laporan</a>
+				</div>
+			</div>
+			<div class="caption-banner">
+				<p>Malam Lailatul Coding adalah malam amal bagi para pekerja kreatif <br>
+				untuk saling berpartisipasi tidak hanya dalam bentuk uang, tetapi <br>
+				juga berupa sumbangan keahlian.</p>
+				<a href="" class="small button ">Lailatul Coding 2016, 1 juni - 2 juni, 18:00-05:00</a>
+			</div>
+		<img src="<?php echo base_url('assets/images'); ?>/header-background.jpg" />
+	</div>
+	<div class="row">
+			<h1 class="center">Cara Kerja</h1>
+		<div class="center">
+			<div class="small-4 column">
+				<img src="<?php echo base_url('assets/images'); ?>/icon-developer.png" />
+				<h3>Developer / Designer</h3>
+				<p>Sumbangan dapat berbentuk keahlian Coding / Design untuk menyelesaikan project</p>
+			</div>
+			<div class="small-4 column">
+				<img src="<?php echo base_url('assets/images'); ?>/icon-project-owner.png" />
+				<h3>Project Owner</h3>
+				<p>Sewa Developer atau Designer ditempat untuk menyumbang</p>
+			</div>
+			<div class="small-4 column">
+				<img src="<?php echo base_url('assets/images'); ?>/icon-donation.png" />
+				<h3>Donate On The Spot</h3>
+				<p>Datang Langsung untuk memberikan sumbangan</p>
+			</div>
+		</div>
+		<div class="row">
+			
+			<img src="<?php echo base_url('assets/images'); ?>/donation-background.png" width="100%"/>
+			<div class="caption-flag">
+				<p>Lailatul Coding 2016 akan disumbangkan <br>
+				kepada Red Cross International. <br>
+				www.redcross.com</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<h1 class="center">Registrasi Lailatul Coding 2016</h1>
+		<div class="large-12 columns">
 
       	<ul class="tabs" data-tab>
  			<li class="tab-title active large-6"><a href="#panel1">Peserta</a></li>
@@ -134,7 +180,12 @@
   	
 		</div>
        
+
+
       </div>
-    </div>
-  
+	</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- End Header Navigation-->
+
 <?php $this->load->view('sections/footer_scripts'); ?>

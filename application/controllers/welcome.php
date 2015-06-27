@@ -34,16 +34,7 @@ class Welcome extends CI_Controller {
 	}
 	public function daftar_peserta()
 	{
-	  	/*$config = Array(
-		  'protocol' => 'smtp',
-		  'smtp_host' => 'ssl://smtp.googlemail.com',
-		  'smtp_port' => 465,
-		  'smtp_user' => 'fazhaldarul@gmail.com', // change it to yours
-		  'smtp_pass' => 'gmail$$Darul22', // change it to yours
-		  'mailtype' => 'html',
-		  'charset' => 'iso-8859-1',
-		  'wordwrap' => TRUE
-		);
+	  	
 
 		        $message = '';
 		        $this->load->library('email', $config);

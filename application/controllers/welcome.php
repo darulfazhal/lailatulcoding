@@ -35,7 +35,7 @@ class Welcome extends CI_Controller {
 	public function daftar_peserta()
 	{
 	  	
-
+//a
 		        $message = '';
 		        $this->load->library('email', $config);
 		      $this->email->set_newline("\r\n");

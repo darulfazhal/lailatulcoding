@@ -74,12 +74,12 @@
 				   
 				</form>
   			</div>
-		  	<div class="content right" id="panel2">
-		     	<form action="welcome/daftar_peserta">
+		  	<div class="content" id="panel2">
+		     	<?php echo form_open_multipart('modul_event/add_event'); ?>
 				  <div class="row">
 				    <div class="large-6 columns">
 				      <label>Nama Anda</label>
-				      <input type="text" placeholder="*Nama " name="nama_pemohon"/>
+				      <input type="text" placeholder="*Nama " name="nama_penyelenggara"/>
 				    </div>
 				  </div>
 				  <div class="row">
@@ -96,10 +96,25 @@
 				    </div>
 				     
 				  </div>
+				  <div class="row">
+				    <div class="large-6 medium-4 columns">
+				      <label>Alamat Anda</label>
+				      <textarea placeholder="Alamat Anda" name="alamat"></textarea>
+				    </div>
+				     
+				  </div>
+				  <hr>
 				   <div class="row">
 				    <div class="large-6 medium-4 columns">
 				      <label>Kota Acara</label>
 				      <input type="text" placeholder="Kota" name="kota"/>
+				    </div>
+				     
+				  </div>
+				  <div class="row">
+				    <div class="large-6 medium-4 columns">
+				      <label>Tahun Acara</label>
+				      <input type="text" placeholder="Tahun Acara" name="tahun"/>
 				    </div>
 				     
 				  </div>
@@ -113,7 +128,7 @@
 				<input type="checkbox" name="agree" value="agree" id="agree"><label for="agree">I Agree ...</label>
 				  <div class="row">
 				    <div class="large-12 columns">
-				    <p><a href="#" class="small button">Daftarkan Event</a>
+				    <input type="submit" value="asd" class="small button">
 				    </div>
 				  </div>
 				   

@@ -11,7 +11,9 @@ class Home extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('admin/main', $this->_admin);
+		$data['admin']=$this->_admin;
+		$data['content']="event";
+		$this->load->view('admin/main', $data);
 	}
 }
 

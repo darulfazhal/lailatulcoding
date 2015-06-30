@@ -20,19 +20,25 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td><a href="<?php echo admin_url('event/detail/bandung'); ?>">Bandung</a></td>
-								<td>idGeekGirls</td>
-								<td>35 orang</td>
-								<td>0878234234234</td>
-								<td>Co & Co space</td>
-								<td>2015</td>
-								<td>
-									<a class="btn btn-success btn-xs"><i class="fa fa-check"></i></a>
-									<a class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
-									<a class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></a>
-								</td>
-							</tr>
+							<?php
+							foreach($events as $event){
+								echo"
+								<tr>
+									<td><a href='".$event->kota."'>".$event->kota."</a></td>
+									<td>".$event->nama_penyelenggara."</td>
+									<td>".$event->jml_perserta	." orang</td>
+									<td>".$event->telpon."</td>
+									<td>".$event->alamat."</td>
+									<td>".$event->tahun."</td>
+									<td>
+										<a href='".$event->id_event."' class='btn btn-success btn-xs'><i class='fa fa-check'></i></a>
+										<a href='".$event->id_event."' class='btn btn-primary btn-xs'><i class='fa fa-pencil'></i></a>
+										<a href='".$event->id_event."' class='btn btn-danger btn-xs'><i class='fa fa-trash-o '></i></a>
+									</td>
+								</tr>
+								";
+							}
+							?>
 						</tbody>
 					</table>
 				</div><!-- /content-panel -->

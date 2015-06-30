@@ -1,20 +1,25 @@
 <?php
 class Info extends CI_Controller
 {
+	private $_admin;
+
+
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->model('infos_model');				
+		$this->load->model('infos_model');
+		if(!$this->session->userdata('logged_in')) redirect('admin/login');
+	    $this->_admin = $this->session->userdata('logged_in');
 	}
 
 	// /Info/index
 	public function index()
-	{		
+	{
 		$data['infos'] = $this->infos_model->getAll()->result();
 		$this->load->view('infos/index',$data);
 	}
-	
+
 	// /Info/create
 	public function create()
 	{
@@ -26,7 +31,7 @@ class Info extends CI_Controller
 		$data['pro_total']="";
 		$data['don_total']="";
 		$data['created_at']="";
-		$data['updated_at']="";		
+		$data['updated_at']="";
 
 		$this->load->view('infos/create',$data);
 	}
@@ -50,13 +55,13 @@ class Info extends CI_Controller
 	// /Info/edit
 	public function edit($id)
 	{
-		$data=$this->infos_model->getById($id)->result()[0];			
+		$data=$this->infos_model->getById($id)->result()[0];
 		$this->load->view('infos/create',$data);
 	}
 
 	// /Info/update
 	public function update()
-	{		
+	{
 		$data['id']=$this->input->post('id');
 		$data['kota']=$this->input->post('kota');
 		$data['tahun']=$this->input->post('tahun');
@@ -72,7 +77,7 @@ class Info extends CI_Controller
 	// /Info/delete
 	public function delete()
 	{
-		$data['id']=$this->input->post('id');		
+		$data['id']=$this->input->post('id');
 		$this->infos_model->delete($data['id']);
 		redirect(site_url('info/index'));
 	}
@@ -87,15 +92,15 @@ class Info extends CI_Controller
 		$data['pro_total']="";
 		$data['don_total']="";
 		$data['created_at']="";
-		$data['updated_at']="";		
-		$data['cities']=$this->infos_model->getCity(Date('Y'))->result();				
+		$data['updated_at']="";
+		$data['cities']=$this->infos_model->getCity(Date('Y'))->result();
 
 		$this->load->view('infos/report',$data);
 	}
 
 	public function ajax()
 	{
-		$result=$this->infos_model->getCity($this->input->post('year'))->result();						
+		$result=$this->infos_model->getCity($this->input->post('year'))->result();
 	 	$list = array();
 	    while($row = $result->fetch_assoc())
 	    {

@@ -7,10 +7,10 @@ class Login extends CI_Controller {
 	 *
 	 * Maps to the following URL
 	 * 		http://example.com/index.php/welcome
-	 *	- or -  
+	 *	- or -
 	 * 		http://example.com/index.php/welcome/index
 	 *	- or -
-	 * Since this controller is set as the default controller in 
+	 * Since this controller is set as the default controller in
 	 * config/routes.php, it's displayed at http://example.com/
 	 *
 	 * So any other public methods not prefixed with an underscore will
@@ -18,7 +18,7 @@ class Login extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	function __construct(){
-		parent::__construct();	 
+		parent::__construct();
 	}
 
 	public function index()	{
@@ -29,16 +29,17 @@ class Login extends CI_Controller {
 	   }else{
 	   		$this->load->view('admin/login');
 	   }
-	
-   
+
+
 	}
 	public function do_login()
 	{
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
+
 	  	 //query the database
 	   	$result = $this->m_user->login($username, $password);
-	   	
+
 	   if($result)
 	   {
 	     $sess_array = array();
@@ -70,13 +71,13 @@ class Login extends CI_Controller {
 	}
 	public function logout(){
 		$this->session->unset_userdata('logged_in');
-	   	
+
 	   	redirect('admin/', 'refresh');
 	}
 	public function do_forgot_password(){
 		 $email = $this->input->post('email');
 		 $result = $this->m_user->check_email($email);
-		 
+
 		 if($result){
 		 	echo $generate = $this->randomPassword();
 		  	$password = sha1($generate);
@@ -85,7 +86,7 @@ class Login extends CI_Controller {
 		 	if($updateResult){
 		 		//redirect('admin/', 'refresh');
 		 	}
-		 	 
+
 		 }else{
 	 		$this->session->set_flashdata('message', 'Email Tidak ada ');
 		   	redirect('welcome/forgot', 'refresh');

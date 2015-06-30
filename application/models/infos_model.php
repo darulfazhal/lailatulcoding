@@ -25,7 +25,6 @@ class Infos_model extends CI_Model{
 
 	public function store($data)
 	{
-		var_dump($data);
 		$query=$this->db->insert("infos",$data);
 	}
 
@@ -47,7 +46,7 @@ class Infos_model extends CI_Model{
 		$this->db->from("infos");
 		$this->db->where("tahun",$year);
 		$this->db->group_by("kota");
-		
+
 		return $this->db->get();
 	}
 

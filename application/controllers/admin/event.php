@@ -6,12 +6,14 @@ class Event extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
+		$this->load->model('event_model');
 	    if(!$this->session->userdata('logged_in')) redirect('admin/login');
 	    $this->_admin = $this->session->userdata('logged_in');
 	}
 	public function index()	{
 		$data['content'] = 'event';
 		$data['admin'] = $this->_admin;
+		$data['events'] = $this->event_model->getAll()->result();
 		$this->load->view('admin/main', $data);
 	}
 	public function add() {

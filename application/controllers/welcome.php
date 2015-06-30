@@ -7,10 +7,10 @@ class Welcome extends CI_Controller {
 	 *
 	 * Maps to the following URL
 	 * 		http://example.com/index.php/welcome
-	 *	- or -  
+	 *	- or -
 	 * 		http://example.com/index.php/welcome/index
 	 *	- or -
-	 * Since this controller is set as the default controller in 
+	 * Since this controller is set as the default controller in
 	 * config/routes.php, it's displayed at http://example.com/
 	 *
 	 * So any other public methods not prefixed with an underscore will
@@ -19,10 +19,10 @@ class Welcome extends CI_Controller {
 	 */
 	function __construct(){
 		parent::__construct();
-		  
-		
-		 
-	 
+
+
+
+
 	}
 	public function index()
 	{
@@ -34,7 +34,7 @@ class Welcome extends CI_Controller {
 	}
 	public function daftar_peserta()
 	{
-	  	
+
 //a
 		        $message = '';
 		        $this->load->library('email', $config);
@@ -50,7 +50,7 @@ class Welcome extends CI_Controller {
 		     else
 		    {
 		     show_error($this->email->print_debugger());
-		    }*/
+		    }
 
 	    $this->form_validation->set_rules('nama_peserta', 'Nama Peserta', 'required');
 	    $this->form_validation->set_rules('email', 'Email', 'required');
